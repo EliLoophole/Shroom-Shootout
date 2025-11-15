@@ -49,6 +49,11 @@ ProjectSettings/UnityConnectSettings.asset
 ProjectSettings/PackageManagerSettings.asset
 ProjectSettings/ClusterInputSettings.asset
 
+#Aseprite Files
+
+*.aseprite
+*.ase
+
 # Optional: Ignore all .meta files except for specific ones you want to track
 # Be cautious with this, as .meta files are crucial for Unity asset tracking.
 # If you choose to ignore all .meta files, you'll need to explicitly add back
