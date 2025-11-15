@@ -2,14 +2,17 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void TiltGun(float tiltAngle)
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Walk()
+    {
+
+    }
+
+    public void Jump()
     {
         
     }
