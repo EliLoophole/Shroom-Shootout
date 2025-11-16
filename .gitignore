@@ -7,8 +7,6 @@ Build/
 Builds/
 Logs/
 UserSettings/
-*aseprite.meta
-*png.meta
 
 # Visual Studio
 .vs/
@@ -54,6 +52,7 @@ ProjectSettings/ClusterInputSettings.asset
 
 *.aseprite
 *.ase
+*aseprite.meta
 
 # Optional: Ignore all .meta files except for specific ones you want to track
 # Be cautious with this, as .meta files are crucial for Unity asset tracking.
