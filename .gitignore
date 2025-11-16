@@ -1,6 +1,5 @@
 # Unity
 .DS_Store
-*.meta
 Library/
 Temp/
 Obj/
@@ -8,6 +7,8 @@ Build/
 Builds/
 Logs/
 UserSettings/
+*aseprite.meta
+*png.meta
 
 # Visual Studio
 .vs/

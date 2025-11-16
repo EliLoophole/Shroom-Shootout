@@ -10,9 +10,10 @@ public class Entity : MonoBehaviour
     [Header("Actions")]
     public ActionQueue actionQueue;
 
-    public void FireProjectile(GameObject projectilePrefab, int projectileDamage, float spread, float projectileSpeed, float fireAngle)
+    public void FireProjectile(GameObject projectilePrefab, int projectileDamage, float spread, float projectileSpeed, float fireAngle, GameObject particlePrefab)
     {
         Projectile projectile = Instantiate(projectilePrefab,transform.position,Quaternion.Euler(0f,0f,fireAngle + Random.Range(spread, -spread))).GetComponent<Projectile>();
+        GameObject particles = Instantiate(particlePrefab,transform.position,Quaternion.Euler(0f,0f,fireAngle));
         projectile.speed = projectileSpeed;
         projectile.sourceEntity = this;
 

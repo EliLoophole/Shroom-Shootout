@@ -36,6 +36,7 @@ public class ProjectileCard : Card
     public int projectileDamage = 1;
     public float projectileSpeed = 10f;
     public GameObject projectilePrefab;
+    public GameObject particles;
 
 
     public int projectileCount = 1;
@@ -49,7 +50,7 @@ public class ProjectileCard : Card
 
         for(int i = 0; i < projectileCount; i++)
         {
-            sourceEntity.FireProjectile(projectilePrefab, projectileDamage, projectileSpread, projectileSpeed, fireAngle);
+            sourceEntity.FireProjectile(projectilePrefab, projectileDamage, projectileSpread, projectileSpeed, fireAngle, particles);
             fireAngle += projectileSeparation;
             
         }
