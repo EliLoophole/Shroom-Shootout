@@ -53,13 +53,16 @@ public class DynamicCamera : MonoBehaviour
         if(target != null)
         {
             targetPos = new Vector3(target.position.x,target.position.y,-10f);
-            targetPos += offset;
-            this.transform.position = Vector3.Lerp(tform.position,targetPos,followSpeed * Time.deltaTime);            
+        
         }
         else
         {
-             this.transform.position = Vector3.Lerp(tform.position,new Vector3(0.0f,0.0f,-10.0f),followSpeed * Time.deltaTime);                
+             targetPos = new Vector3(0.0f,0.0f,-10.0f);              
         }
+
+        targetPos += offset;
+
+        this.transform.position = Vector3.Lerp(tform.position,targetPos,followSpeed * Time.deltaTime);    
 
     }
 

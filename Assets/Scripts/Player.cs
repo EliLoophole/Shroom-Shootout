@@ -2,23 +2,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public void TiltGun(float tiltAngle)
-    {
+    private Entity entity;
 
-    }
+    void Start() { entity = GetComponent<Entity>(); }
 
-    public void Walk()
-    {
-
-    }
-
-    public void Jump()
-    {
-        
-    }
-
-    public void Shoot(int bulletCount, int bulletDamage)
-    {
-
-    }
+    // Player-specific: Input, animations
 }
+
