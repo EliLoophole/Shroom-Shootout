@@ -6,6 +6,7 @@ public class ActionQueue : MonoBehaviour
 
     public List<Card> queuedCards = new List<Card>();
     private Entity entity;
+    public bool testAction = false;
 
     void Start()
     {
@@ -15,7 +16,11 @@ public class ActionQueue : MonoBehaviour
 
     void Update()
     {
-        
+        if(testAction)
+        {
+            PlayNext();
+            testAction = false;
+        }
     }
 
     public int GetQueueLength()

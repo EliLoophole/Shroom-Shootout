@@ -1,15 +1,13 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System;
-using System.Linq;
-using UnityEngine.Events;
 
-// Updated Enums
+
 public enum CardType { Attack, Maneuver, Trick }
 public enum Keyword { Exhaust, Unplayable, QueueBack, QueueRandom, Prefire }
 
 [CreateAssetMenu(fileName = "New Card", menuName = "Cards/Card")]
-public abstract class Card : ScriptableObject
+public class Card : ScriptableObject
 {
     [Header("Display Data")]
     public string name;
@@ -19,19 +17,30 @@ public abstract class Card : ScriptableObject
     [Header("Gameplay Data")]
     public CardType type;
     public Keyword[] keywords;
+
+    [SerializeReference]
+    public List<CardEffect> effects = new List<CardEffect>();
     public int Time = 1;
 
 
-    public abstract void TriggerEffects(Entity sourceEntity);
-
-    public void TriggerGenericEffects(Entity sourceEntity)
+    public void TriggerEffects(Entity sourceEntity)
     {
         Debug.Log("Generic card effects played");
+        foreach(CardEffect effect in effects)
+        {
+            effect.TriggerEffect(sourceEntity);
+        }
     }
 }
 
-[CreateAssetMenu(fileName = "Projectile Card", menuName = "Cards/ProjectileCard")]
-public class ProjectileCard : Card
+[System.Serializable]
+public abstract class CardEffect
+{
+    public abstract void TriggerEffect(Entity sourceEntity);
+}
+
+[System.Serializable]
+public class ProjectileEffect : CardEffect
 {
     public int projectileDamage = 1;
     public float projectileSpeed = 10f;
@@ -41,10 +50,10 @@ public class ProjectileCard : Card
 
     public int projectileCount = 1;
 
-    private int projectileSeparation = 15;
+    public int projectileSeparation = 8;
     public int projectileSpread = 0;
 
-    public override void TriggerEffects(Entity sourceEntity)
+    public override void TriggerEffect(Entity sourceEntity)
     {
         float fireAngle = sourceEntity.aimAngle - (projectileSeparation * (projectileCount - 1)) / 2;
 
@@ -54,6 +63,20 @@ public class ProjectileCard : Card
             fireAngle += projectileSeparation;
             
         }
+    }   
+
+ 
+    
+}
+
+[System.Serializable]
+public class WalkEffect : CardEffect
+{
+    public float paces = 1;
+
+    public override void TriggerEffect(Entity sourceEntity)
+    {
+        //sourceEntity.Move(paces);
     }   
 
  

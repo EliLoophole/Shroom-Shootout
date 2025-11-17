@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5cab796fc70380e4b80d520e4564f324
+guid: 7bb7e2c5c4009fe48a77f8efb341762c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4374043838049885876
-    second: player_weapon_0
+      213: -2011081452543692480
+    second: bandit_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_weapon_0
+      name: bandit_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 19
-        height: 10
+        width: 27
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4be13fe22b9b3bc30800000000000000
-      internalID: 4374043838049885876
+      spriteID: 041b1c6f2143714e0800000000000000
+      internalID: -2011081452543692480
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      player_weapon_0: 4374043838049885876
+      bandit_0: -2011081452543692480
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
