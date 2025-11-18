@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 637193baf220ca84c9aa4df1bc40be2d, type: 3}
+  m_Name: LittleIron
+  m_EditorClassIdentifier: Assembly-CSharp::Card
+  name: Little Iron
+  description: Names
+  image: {fileID: -2495838832440557991, guid: 69d52620aaa525040956d4063726cd5b, type: 3}
+  type: 0
+  keywords: 02000000
+  effects:
+  - rid: 2856753671297827021
+  Time: 1
+  references:
+    version: 2
+    RefIds:
+    - rid: 2856753671297827021
+      type: {class: ProjectileEffect, ns: , asm: Assembly-CSharp}
+      data:
+        projectileDamage: 1
+        projectileSpeed: 15
+        projectilePrefab: {fileID: 1572946430948940389, guid: 37cd63c872ae45b4ea1e6a3068aa10df, type: 3}
+        particles: {fileID: 1844252208700356594, guid: a4d5b6cc2ba64b04788572c9a28515d1, type: 3}
+        projectileCount: 1
+        projectileSeparation: 0
+        projectileSpread: 5

@@ -16,7 +16,6 @@ UserSettings/
 *.pidb
 *.booproj
 *.unityproj
-*.asset
 *.csproj
 *.sln
 *.orig
