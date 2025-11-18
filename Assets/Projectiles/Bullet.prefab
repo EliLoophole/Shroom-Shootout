@@ -110,6 +110,8 @@ MonoBehaviour:
   sourceEntity: {fileID: 0}
   hitPlayer: 0
   hitEnemies: 0
+  pierce: 1
+  hitEntities: []
   damage: 1
   speed: 0
 --- !u!50 &9079545277513475605
@@ -173,8 +175,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0030280352, y: 0.13041347}
-  m_Size: {x: 0.16737115, y: 0.26153302}
+  m_Offset: {x: -0.0030280352, y: 0.20991564}
+  m_Size: {x: 0.16737115, y: 0.42053735}
   m_Direction: 0
 --- !u!96 &2843770082870722110
 TrailRenderer:

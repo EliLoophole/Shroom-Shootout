@@ -10,9 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4952342215866059186}
   - component: {fileID: 6983040310210665292}
-  - component: {fileID: 224021943417092763}
-  - component: {fileID: 68647794908784891}
-  - component: {fileID: 7141046529396698543}
   - component: {fileID: 5927725931942893783}
   - component: {fileID: 1172543979977401787}
   m_Layer: 0
@@ -95,50 +92,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &224021943417092763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1470514348358744091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a14fd0f5a6101f84ead0320b17ba9091, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  aiDeck: []
---- !u!114 &68647794908784891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1470514348358744091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddf66251840d47149b304894e6b8057b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Entity
-  health: 4
-  aimAngle: 90
-  barrel: {fileID: 2952837974221835019}
-  actionQueue: {fileID: 7141046529396698543}
---- !u!114 &7141046529396698543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1470514348358744091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e902c31dc19eca48a9267b7b9f32d7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ActionQueue
-  queuedCards:
-  - {fileID: 11400000, guid: 4955c8661e0515e4b9b789e0a0b99459, type: 2}
-  testAction: 1
 --- !u!70 &5927725931942893783
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -173,8 +126,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0013046265, y: 0.009502232}
-  m_Size: {x: 0.49887657, y: 1.001275}
+  m_Offset: {x: -0.07998061, y: -0.17602348}
+  m_Size: {x: 0.38850355, y: 0.6302235}
   m_Direction: 0
 --- !u!50 &1172543979977401787
 Rigidbody2D:
@@ -212,6 +165,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2925926650613159522}
+  - component: {fileID: 7149262529720630796}
+  - component: {fileID: 9120061738324747418}
+  - component: {fileID: 7734772765613809633}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -237,6 +193,50 @@ Transform:
   - {fileID: 4952342215866059186}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7149262529720630796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885536520545451425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a14fd0f5a6101f84ead0320b17ba9091, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  aiDeck: []
+--- !u!114 &9120061738324747418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885536520545451425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf66251840d47149b304894e6b8057b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Entity
+  health: 4
+  aimAngle: 90
+  barrel: {fileID: 2952837974221835019}
+  actionQueue: {fileID: 0}
+--- !u!114 &7734772765613809633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885536520545451425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e902c31dc19eca48a9267b7b9f32d7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ActionQueue
+  queuedCards:
+  - {fileID: 11400000, guid: 4955c8661e0515e4b9b789e0a0b99459, type: 2}
+  testAction: 1
 --- !u!1 &6482494372853950317
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4282411305454095969}
   - component: {fileID: 5276816217889346785}
-  - component: {fileID: 4469691793512337126}
+  - component: {fileID: 5428042079365053200}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -264,7 +264,7 @@ Transform:
   m_GameObject: {fileID: 6482494372853950317}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.713419, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Weakpoint
   multiplier: 3
---- !u!58 &4469691793512337126
+--- !u!58 &5428042079365053200
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -317,8 +317,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.016605139, y: 0.00073444843}
-  m_Radius: 0.14729142
+  m_Offset: {x: -0.10065454, y: 0.111121535}
+  m_Radius: 0.2095365
 --- !u!1 &8379143092970866855
 GameObject:
   m_ObjectHideFlags: 0

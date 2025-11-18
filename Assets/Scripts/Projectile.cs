@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Projectile : MonoBehaviour
 {
@@ -6,6 +8,8 @@ public class Projectile : MonoBehaviour
 
     public bool hitPlayer = false;
     public bool hitEnemies = false;
+    public int pierce = 1;
+    public List<Entity> hitEntities = new List<Entity>();
     public int damage = 1;
 
     public float speed = 10f;
@@ -40,7 +44,7 @@ public class Projectile : MonoBehaviour
 
         Debug.Log(entity);
 
-        if(entity != null)
+        if(entity != null && NotHit(entity))
         {
             if((entity.GetComponent<Enemy>()!=null && hitEnemies) || (entity.GetComponent<Player>()!=null && hitPlayer))
             {
@@ -62,19 +66,36 @@ public class Projectile : MonoBehaviour
         {
             if(proj != null && proj.hitPlayer == hitEnemies)
             {
-                damage -= proj.damage;
+                proj.pierce = 0;
+                pierce = 0;
+                proj.Impact();
+                
             }
         }
         else
         {
-            damage = 0;
+            pierce = 0;
         }
         
+        Impact();
+    }
 
-        if(damage <= 0)
+    public void Impact()
+    {
+        pierce--;
+        if(pierce < 1) Destroy(this.gameObject);
+    }
+
+    private bool NotHit(Entity testEntity)
+    {
+        foreach(Entity hitEntity in hitEntities)
         {
-            Destroy(this.gameObject);
+            if(hitEntity == testEntity)
+            {
+                return false;
+            }
         }
+        return true;
     }
 
 }
