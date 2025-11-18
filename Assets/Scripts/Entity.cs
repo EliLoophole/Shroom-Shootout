@@ -5,7 +5,6 @@ public class Entity : MonoBehaviour
     [Header("Stats")]
     public int health = 1;  // Most die in 1-2 shots
     public float aimAngle = 0f;
-    public bool isPlayer = false;
     public Transform barrel;
 
     [Header("Actions")]
@@ -18,14 +17,12 @@ public class Entity : MonoBehaviour
         projectile.speed = projectileSpeed;
         projectile.sourceEntity = this;
         projectile.damage = projectileDamage;
-
-        Debug.Log("Fire Krazy Bullets");
     }
 
-    public virtual void TakeDamage(int dmg, int critical) 
+    public virtual void TakeDamage(int dmg, int multiplier) 
     { 
-        dmg *= critical;
-        health -= dmg; if (health <= 0) Die();
+        int value = dmg * multiplier;
+        health -= value; if (health <= 0) Die();
     }
     public virtual void Die() 
     {

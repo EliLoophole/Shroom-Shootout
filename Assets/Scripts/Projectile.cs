@@ -12,7 +12,7 @@ public class Projectile : MonoBehaviour
 
     void Start()
     {
-        if(sourceEntity.isPlayer)
+        if(sourceEntity.GetComponent<Player>() != null)
         {
             hitEnemies = true;
         }
@@ -29,8 +29,16 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Entity entity = other.GetComponent<Entity>();
+        if(damage <= 0)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+
+        Entity entity = other.GetComponentInParent<Entity>();
         Projectile proj = other.GetComponent<Projectile>();
+
+        Debug.Log(entity);
 
         if(entity != null)
         {
@@ -42,12 +50,12 @@ public class Projectile : MonoBehaviour
                 if(other.GetComponent<Weakpoint>() != null)
                 {
                     multiplier = other.GetComponent<Weakpoint>().multiplier;
-                    Debug.Log("crit");
                 }
 
                 entity.TakeDamage(value, multiplier);
 
                 this.damage -= value;
+                
             }
         }
         else if(proj != null)
