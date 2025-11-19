@@ -13,7 +13,6 @@ public class DynamicCamera : MonoBehaviour
     private float zoomAmount = 1.0f;
     private float defaultSize;
 
-    //Camera Follow Mouse
     public float followStrength = 0.1f;  
     public float maxOffset = 3f;         
 
@@ -22,6 +21,10 @@ public class DynamicCamera : MonoBehaviour
 
     public float followSpeed = 1.0f;
     public float zoomSpeed = 1.0f;
+
+    private Vector2 previousOffset;
+    private Vector2 offset;
+    private float shakeValue = 0;
 
     void Start()
     {

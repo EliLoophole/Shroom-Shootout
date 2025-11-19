@@ -16,7 +16,7 @@ MonoBehaviour:
   description: Names
   image: {fileID: -2495838832440557991, guid: 69d52620aaa525040956d4063726cd5b, type: 3}
   type: 0
-  keywords: 02000000
+  keywords: 
   effects:
   - rid: 2856753671297827021
   Time: 1
@@ -27,7 +27,7 @@ MonoBehaviour:
       type: {class: ProjectileEffect, ns: , asm: Assembly-CSharp}
       data:
         projectileDamage: 1
-        projectileSpeed: 15
+        projectileSpeed: 20
         projectilePrefab: {fileID: 1572946430948940389, guid: 37cd63c872ae45b4ea1e6a3068aa10df, type: 3}
         particles: {fileID: 1844252208700356594, guid: a4d5b6cc2ba64b04788572c9a28515d1, type: 3}
         projectileCount: 1

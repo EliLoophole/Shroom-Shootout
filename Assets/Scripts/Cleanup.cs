@@ -23,4 +23,9 @@ public class Cleanup : MonoBehaviour
         yield return new WaitForSeconds(lifetime);
         Destroy(gameObject);
     }
+
+    public void Destroy()
+    {
+        Destroy(gameObject);
+    }
 }

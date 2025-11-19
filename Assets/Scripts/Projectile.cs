@@ -14,6 +14,9 @@ public class Projectile : MonoBehaviour
 
     public float speed = 10f;
 
+    public GameObject impactEffect;
+    public GameObject critEffect;
+
     void Start()
     {
         if(sourceEntity.GetComponent<Player>() != null)
@@ -54,6 +57,7 @@ public class Projectile : MonoBehaviour
                 if(other.GetComponent<Weakpoint>() != null)
                 {
                     multiplier = other.GetComponent<Weakpoint>().multiplier;
+                    Instantiate(critEffect,transform.position,Quaternion.identity);
                 }
 
                 entity.TakeDamage(value, multiplier);
@@ -83,6 +87,7 @@ public class Projectile : MonoBehaviour
     public void Impact()
     {
         pierce--;
+        Instantiate(impactEffect,transform.position,Quaternion.identity);
         if(pierce < 1) Destroy(this.gameObject);
     }
 

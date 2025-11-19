@@ -114,6 +114,8 @@ MonoBehaviour:
   hitEntities: []
   damage: 1
   speed: 0
+  impactEffect: {fileID: 6077318268138710732, guid: 13ba718eb9d480f47b31f263b2981ba6, type: 3}
+  critEffect: {fileID: 6077318268138710732, guid: e8066093df3a04d48984336f36ac8b06, type: 3}
 --- !u!50 &9079545277513475605
 Rigidbody2D:
   serializedVersion: 5
